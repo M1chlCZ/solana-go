@@ -2700,6 +2700,45 @@ func TestClient_GetStakeActivation(t *testing.T) {
 	assert.Equal(t, expected, got, "both deserialized values must be equal")
 }
 
+func TestClient_GetStakeMinimumDelegation(t *testing.T) {
+	responseBody := `{"context":{"slot":444641696},"value":1}`
+	server, closer := mockJSONRPC(t, stdjson.RawMessage(wrapIntoRPC(responseBody)))
+	defer closer()
+
+	client := New(server.URL)
+
+	out, err := client.GetStakeMinimumDelegation(
+		context.Background(),
+		CommitmentProcessed,
+	)
+	require.NoError(t, err)
+
+	// the ID is random, so we can't assert it; let's check that it is set, and then remove it
+	reqBody := server.RequestBody(t)
+	assert.NotNil(t, reqBody["id"])
+	reqBody["id"] = any(nil)
+
+	assert.Equal(t,
+		map[string]interface{}{
+			"id":      any(nil),
+			"jsonrpc": "2.0",
+			"method":  "getStakeMinimumDelegation",
+			"params": []interface{}{
+				map[string]interface{}{
+					"commitment": string(CommitmentProcessed),
+				},
+			},
+		},
+		reqBody,
+	)
+
+	expected := mustJSONToInterface([]byte(responseBody))
+
+	got := mustJSONToInterface(mustAnyToJSON(out))
+
+	assert.Equal(t, expected, got, "both deserialized values must be equal")
+}
+
 func TestClient_GetTokenAccountBalance(t *testing.T) {
 	responseBody := `{"context":{"slot":1114},"value":{"amount":"9864","decimals":2,"uiAmount":98.64,"uiAmountString":"98.64"}}`
 	server, closer := mockJSONRPC(t, stdjson.RawMessage(wrapIntoRPC(responseBody)))
