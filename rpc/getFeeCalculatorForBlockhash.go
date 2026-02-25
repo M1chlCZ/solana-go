@@ -1,4 +1,5 @@
 // Copyright 2021 github.com/gagliardetto
+// This file has been modified by github.com/M1chlCZ
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,7 +24,7 @@ import (
 // GetFeeCalculatorForBlockhash returns the fee calculator
 // associated with the query blockhash, or null if the blockhash has expired.
 //
-// NOTE: DEPRECATED
+// Deprecated: use GetLatestBlockhash and GetFeeForMessage instead.
 func (cl *Client) GetFeeCalculatorForBlockhash(
 	ctx context.Context,
 	hash solana.Hash, // query blockhash

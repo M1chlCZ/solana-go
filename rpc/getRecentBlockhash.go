@@ -1,5 +1,6 @@
 // Copyright 2021 github.com/gagliardetto
 // This file has been modified by github.com/gagliardetto
+// This file has been modified by github.com/M1chlCZ
 //
 // Copyright 2020 dfuse Platform Inc.
 //
@@ -22,6 +23,8 @@ import (
 
 // GetRecentBlockhash returns a recent block hash from the ledger,
 // and a fee schedule that can be used to compute the cost of submitting a transaction using it.
+//
+// Deprecated: use GetLatestBlockhash instead.
 func (cl *Client) GetRecentBlockhash(
 	ctx context.Context,
 	commitment CommitmentType, // optional

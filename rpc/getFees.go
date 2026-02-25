@@ -1,4 +1,5 @@
 // Copyright 2021 github.com/gagliardetto
+// This file has been modified by github.com/M1chlCZ
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,6 +25,8 @@ import (
 // a fee schedule that can be used to compute the cost
 // of submitting a transaction using it, and the last
 // slot in which the blockhash will be valid.
+//
+// Deprecated: use GetLatestBlockhash and GetFeeForMessage instead.
 func (cl *Client) GetFees(
 	ctx context.Context,
 	commitment CommitmentType, // optional

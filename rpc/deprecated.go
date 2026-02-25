@@ -1,5 +1,6 @@
 // Copyright 2021 github.com/gagliardetto
 // This file has been modified by github.com/gagliardetto
+// This file has been modified by github.com/M1chlCZ
 //
 // Copyright 2020 dfuse Platform Inc.
 //
@@ -26,8 +27,7 @@ import (
 
 // GetConfirmedBlock returns identity and transaction information about a confirmed block in the ledger.
 //
-// DEPRECATED: Please use `getBlock` instead.
-// This method is expected to be removed in solana-core v1.8
+// Deprecated: use GetBlock instead.
 func (cl *Client) GetConfirmedBlock(
 	ctx context.Context,
 	slot uint64,
@@ -55,8 +55,7 @@ type GetConfirmedBlockOpts struct {
 
 // GetConfirmedBlock returns identity and transaction information about a confirmed block in the ledger.
 //
-// DEPRECATED: Please use `getBlock` instead.
-// This method is expected to be removed in solana-core v1.8
+// Deprecated: use GetBlockWithOpts instead.
 func (cl *Client) GetConfirmedBlockWithOpts(
 	ctx context.Context,
 	slot uint64,
@@ -93,8 +92,7 @@ func (cl *Client) GetConfirmedBlockWithOpts(
 // start_slot and either end_slot, if provided, or latest confirmed block, inclusive.
 // Max range allowed is 500,000 slots.
 //
-// DEPRECATED: Please use `getBlocks` instead.
-// This method is expected to be removed in solana-core v1.8
+// Deprecated: use GetBlocks instead.
 func (cl *Client) GetConfirmedBlocks(
 	ctx context.Context,
 	startSlot uint64,
@@ -116,8 +114,7 @@ func (cl *Client) GetConfirmedBlocks(
 
 // GetConfirmedBlocksWithLimit returns a list of confirmed blocks starting at the given slot.
 //
-// DEPRECATED: Please use `getBlocksWithLimit` instead.
-// This method is expected to be removed in solana-core v1.8
+// Deprecated: use GetBlocksWithLimit instead.
 func (cl *Client) GetConfirmedBlocksWithLimit(
 	ctx context.Context,
 	startSlot uint64,
@@ -137,8 +134,7 @@ func (cl *Client) GetConfirmedBlocksWithLimit(
 // GetConfirmedSignaturesForAddress2 returns confirmed signatures for transactions involving an
 // address backwards in time from the provided signature or most recent confirmed block.
 //
-// DEPRECATED: Please use getSignaturesForAddress instead.
-// This method is expected to be removed in solana-core v1.8
+// Deprecated: use GetSignaturesForAddress instead.
 func (cl *Client) GetConfirmedSignaturesForAddress2(
 	ctx context.Context,
 	address solana.PublicKey,
@@ -171,6 +167,8 @@ func (cl *Client) GetConfirmedSignaturesForAddress2(
 }
 
 // GetConfirmedTransaction returns transaction details for a confirmed transaction.
+//
+// Deprecated: use GetTransaction instead.
 func (cl *Client) GetConfirmedTransaction(
 	ctx context.Context,
 	signature solana.Signature,
@@ -188,6 +186,8 @@ func (cl *Client) GetConfirmedTransaction(
 }
 
 // GetConfirmedTransactionWithOpts returns transaction details for a confirmed transaction.
+//
+// Deprecated: use GetTransaction with GetTransactionOpts instead.
 func (cl *Client) GetConfirmedTransactionWithOpts(
 	ctx context.Context,
 	signature solana.Signature,

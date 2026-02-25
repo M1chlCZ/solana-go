@@ -1,4 +1,5 @@
 // Copyright 2021 github.com/gagliardetto
+// This file has been modified by github.com/M1chlCZ
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,6 +20,8 @@ import (
 )
 
 // GetFeeRateGovernor returns the fee rate governor information from the root bank.
+//
+// Deprecated: this RPC method is deprecated by solana-core and may be removed by validators.
 func (cl *Client) GetFeeRateGovernor(ctx context.Context) (out *GetFeeRateGovernorResult, err error) {
 	err = cl.rpcClient.CallForInto(ctx, &out, "getFeeRateGovernor", nil)
 	return

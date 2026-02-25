@@ -1,4 +1,5 @@
 // Copyright 2021 github.com/gagliardetto
+// This file has been modified by github.com/M1chlCZ
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,6 +20,8 @@ import (
 )
 
 // GetSnapshotSlot returns the highest slot that the node has a snapshot for.
+//
+// Deprecated: use GetHighestSnapshotSlot instead.
 func (cl *Client) GetSnapshotSlot(ctx context.Context) (out uint64, err error) {
 	err = cl.rpcClient.CallForInto(ctx, &out, "getSnapshotSlot", nil)
 	return

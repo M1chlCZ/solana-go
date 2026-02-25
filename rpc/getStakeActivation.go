@@ -1,4 +1,5 @@
 // Copyright 2021 github.com/gagliardetto
+// This file has been modified by github.com/M1chlCZ
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,6 +22,8 @@ import (
 )
 
 // GetStakeActivation returns epoch activation information for a stake account.
+//
+// Deprecated: this RPC method is deprecated by solana-core and may be removed by validators.
 func (cl *Client) GetStakeActivation(
 	ctx context.Context,
 	// Pubkey of stake account to query
