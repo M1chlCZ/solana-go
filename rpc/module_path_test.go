@@ -1,4 +1,4 @@
-// Copyright 2021 github.com/gagliardetto
+// Copyright 2026 github.com/M1chlCZ
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,22 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package rpc
 
 import (
-	"context"
+	"os"
+	"testing"
 
-	"github.com/davecgh/go-spew/spew"
-	"github.com/M1chlCZ/solana-go/rpc"
+	"github.com/stretchr/testify/require"
 )
 
-func main() {
-	endpoint := rpc.TestNet_RPC
-	client := rpc.New(endpoint)
-
-	out, err := client.GetSupply(context.TODO(), rpc.CommitmentFinalized)
-	if err != nil {
-		panic(err)
-	}
-	spew.Dump(out)
+func TestGoModModulePathIsFork(t *testing.T) {
+	data, err := os.ReadFile("../go.mod")
+	require.NoError(t, err)
+	require.Contains(t, string(data), "module github.com/M1chlCZ/solana-go")
 }

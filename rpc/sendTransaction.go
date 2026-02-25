@@ -21,7 +21,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/gagliardetto/solana-go"
+	"github.com/M1chlCZ/solana-go"
 )
 
 // SendTransaction submits a signed transaction to the cluster for processing.

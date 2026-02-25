@@ -20,8 +20,8 @@ import (
 	"fmt"
 
 	ag_binary "github.com/gagliardetto/binary"
-	ag_solanago "github.com/gagliardetto/solana-go"
-	ag_format "github.com/gagliardetto/solana-go/text/format"
+	ag_solanago "github.com/M1chlCZ/solana-go"
+	ag_format "github.com/M1chlCZ/solana-go/text/format"
 	ag_treeout "github.com/gagliardetto/treeout"
 )
 

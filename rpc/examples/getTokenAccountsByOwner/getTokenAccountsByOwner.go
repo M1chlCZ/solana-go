@@ -19,9 +19,9 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	bin "github.com/gagliardetto/binary"
-	"github.com/gagliardetto/solana-go"
-	"github.com/gagliardetto/solana-go/programs/token"
-	"github.com/gagliardetto/solana-go/rpc"
+	"github.com/M1chlCZ/solana-go"
+	"github.com/M1chlCZ/solana-go/programs/token"
+	"github.com/M1chlCZ/solana-go/rpc"
 )
 
 func main() {

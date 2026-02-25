@@ -18,7 +18,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/gagliardetto/solana-go/rpc"
+	"github.com/M1chlCZ/solana-go/rpc"
 )
 
 func main() {

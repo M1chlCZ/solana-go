@@ -18,7 +18,7 @@ import (
 	"errors"
 
 	bin "github.com/gagliardetto/binary"
-	ag_solanago "github.com/gagliardetto/solana-go"
+	ag_solanago "github.com/M1chlCZ/solana-go"
 )
 
 type Lockup struct {
