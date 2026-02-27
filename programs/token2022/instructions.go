@@ -135,7 +135,11 @@ func (inst *Instruction) EncodeToTree(parent ag_treeout.Branches) {
 // Token-2022 concrete instruction variants are added incrementally in follow-up tasks.
 var InstructionImplDef = ag_binary.NewVariantDefinition(
 	ag_binary.Uint8TypeIDEncoding,
-	[]ag_binary.VariantType{},
+	[]ag_binary.VariantType{
+		{
+			"InitializeMint", (*InitializeMint)(nil),
+		},
+	},
 )
 
 func (inst *Instruction) ProgramID() ag_solanago.PublicKey {
