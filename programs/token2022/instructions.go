@@ -139,6 +139,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"InitializeMint", (*InitializeMint)(nil),
 		},
+		{
+			"InitializeAccount", (*InitializeAccount)(nil),
+		},
 	},
 )
 
