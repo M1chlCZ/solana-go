@@ -142,6 +142,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"InitializeAccount", (*InitializeAccount)(nil),
 		},
+		{
+			"InitializeMultisig", (*InitializeMultisig)(nil),
+		},
 	},
 )
 
