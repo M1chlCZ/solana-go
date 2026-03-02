@@ -145,6 +145,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"InitializeMultisig", (*InitializeMultisig)(nil),
 		},
+		{
+			"Transfer", (*Transfer)(nil),
+		},
 	},
 )
 
