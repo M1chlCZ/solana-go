@@ -148,6 +148,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"Transfer", (*Transfer)(nil),
 		},
+		{
+			"Approve", (*Approve)(nil),
+		},
 	},
 )
 
