@@ -157,6 +157,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"SetAuthority", (*SetAuthority)(nil),
 		},
+		{
+			"MintTo", (*MintTo)(nil),
+		},
 	},
 )
 
