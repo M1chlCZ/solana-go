@@ -151,6 +151,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"Approve", (*Approve)(nil),
 		},
+		{
+			"Revoke", (*Revoke)(nil),
+		},
 	},
 )
 
