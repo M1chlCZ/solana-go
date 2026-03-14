@@ -160,6 +160,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"MintTo", (*MintTo)(nil),
 		},
+		{
+			"Burn", (*Burn)(nil),
+		},
 	},
 )
 
