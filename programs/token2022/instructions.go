@@ -163,6 +163,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"Burn", (*Burn)(nil),
 		},
+		{
+			"CloseAccount", (*CloseAccount)(nil),
+		},
 	},
 )
 
