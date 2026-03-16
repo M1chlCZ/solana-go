@@ -166,6 +166,9 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		{
 			"CloseAccount", (*CloseAccount)(nil),
 		},
+		{
+			"FreezeAccount", (*FreezeAccount)(nil),
+		},
 	},
 )
 
